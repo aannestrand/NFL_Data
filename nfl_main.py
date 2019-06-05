@@ -1,12 +1,11 @@
-import nfl_func as nfl
+import dfs_lineup as dfs
 import seaborn as sns
+import pandas as pd
 import matplotlib.pyplot as plt
 
 
 def __main__():
-    #plt.figure(figsize=(20,12))
-    #sns.barplot(x = (nfl.team_total_def_yards('2018')).index, y =(nfl.team_total_def_yards('2018')).values)
-    print(nfl.team_total_off_scoring('2018'))
-    
+    player_df = pd.read_csv('AFC_Fanduel.csv')
+    print(dfs.getLineups(player_df))
     
 __main__()
